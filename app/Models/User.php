@@ -30,6 +30,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
     'password',
     'remember_token',
 ])]
+
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
@@ -53,16 +54,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-    /**
-     * Virtual "name" attribute for Filament and other packages.
-     */
-    // protected function name(): Attribute
-    // {
-    //     return Attribute::make(
-    //         get: fn () => trim("{$this->first_name} {$this->last_name}")
-    //     );
-    // }
 
     /**
      * Gender relationship.
